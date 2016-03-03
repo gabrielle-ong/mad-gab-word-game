@@ -21,7 +21,8 @@ body {
   font-family: 'Purple Purse', cursive;
   align-items: center;
   justify-content: center;
-  min-width: 700px; }
+  min-width: 700px;
+  display: flex; }
 
 #startContainer {
   display: flex;
@@ -60,7 +61,8 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  display: none; }
+  display: none;
+  max-width: 650px; }
 
 #about {
   color: #FF504F;
@@ -81,7 +83,8 @@ li {
   flex-direction: column;
   padding: 30px;
   max-width: 900px;
-  display: none; }
+  display: none;
+  margin: 0px; }
 
 input {
   font-family: 'Purple Purse', cursive;
@@ -136,7 +139,8 @@ container {
   flex-direction: column;
   padding: 30px;
   max-width: 850px;
-  display: none; }
+  display: none;
+  margin: 0px; }
   #endContainer h5 {
     text-align: center; }
 
