@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Purple+Purse' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mad Gab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div id="startContainer">
+        <h1 id="title" class="center">Mad Gab</h1>
+        <h4 id="credit">By Sane Gab</h4>
+        <div id="instructions" class="center">
+            <h2 class="example">“Itsy Citing Foe Wall.”</h2>
+            <h3>The translation:</h3>
+            <h2 class="example">It’s Exciting For All.</h2>
+            <h3>The game where even winners sound like losers. <br> Take turns to translate as many Mad Gabs as you can in 30 seconds.
+            <br>
+            <br>
+            <button id="next" class="button">Next</button>   
+            </h3>
+        </div>
+    </div>
+        
+    <div id="aboutContainer" class="center">
+        <h5 id="about">About the Game</h5>
+        <h3>
+            This game is a test for the human brain to process sounds.
+            <br>
+            The phrases have to be spoken out loud and listened to. Reading the phrase silently will not work because only the sounds can be encoded into meaningful English words.
+        </h3>  
+        <ul><h5>Game features:</h5>
+            <h3>
+                <li>Answers are case insensitive</li>
+                <li>Unanswered questions go to the next player</li>
+                <li>Press enter or click submit</li>
+            </h3>
+        </ul>
+        <button id="letsPlay" class="button center">Let's Play!</button>
+    </div>
+    
+    
+    <div id="gameContainer">
+        <h2 id="question" class="example">Question Here</h2>
+        <h3>Answer:</h3>
+        <div id="answer">
+            <input  type="text" placeholder="Hint:">
+            <span></span>
+        </div>
+        <div id="skip-submit">
+            <button id="skip" class="button">Skip</button>
+            <button id="submit" class="button">Submit</button>
+        </div>
+        
+        <container>
+            <left>
+                <h3 class="underlined">Player 1's Score: </h3>
+                <score1>
+                </score1>
+            </left>
+            
+            <div id="timerDiv">
+                <h2 class="currentPlayer redText"  id="player">Player no</h2>
+                <h2>Time Left: </h2>
+                <h2 class="redText" id="timer">30</h2>
+                <button id="pause" class="button">Pause Game</button>
+            </div>
+            <right>
+                <h3 class="underlined">Player 2's Score: </h3>
+                <score2></score2>
+            </right>
+        </container>
+    </div>
+    
+    <div id="endContainer">
+        <h5 id="roundOver">Round Over</h5>
+        <div id="scoreBoxes">
+            <div class="scoreBox">
+                <h2 class="underlined">Player 1:</h2>
+                <score1></score1>
+                <hr>
+                <h2 id="remarks1"></h2>
+            </div>
+
+            <div class="scoreBox">
+                <h2 class="underlined">Player 2:</h2>
+                <score2></score2>
+                <hr>
+                <h2 id="remarks2"></h2>
+                </div>
+            </div>
+        <div id="reset-next">
+            <button class="reset button">Reset Game</button>
+            <button id="nextRound" class="button">Next Round</button>
+        </div>
+    </div>
+        
+    <div id="pauseContainer">
+        <h1 id="title" class="center">Game Paused</h1>
+        <div id="reset-resume">
+            <button class="reset button">Reset Game</button>
+            <button id="resume" class="button">Resume Game</button>
+        </div>
+    </div>
+    
+    <div id="switchContainer">
+        <h5 id="switchContainerRound" class="underlined">lala</h5>
+        <h1 class="currentPlayer">Player no</h1>
+        <h5>Are you ready?</h5>
+        <button id="begin" class="button" class="center">Begin</button>
+    </div>
+    
+    <div id="noMoreQuestions">
+        <h1>Game Over</h1>
+        <h2>You have gone through all the questions of the game!
+        <br>Play Again?
+        </h2>
+        <button class="reset button">Reset Game</button>
+    </div>
+<body>
+<html>
+
