@@ -221,22 +221,19 @@ $("#next").click(function(){
         } 
         else {
             i = 4;
-        } 
-        console.log(wdiStatus.toLowerCase());
-        console.log("value of i is " + i);                            
+        }                         
     });
     
 //switchContainer
     $('#begin').click(function (){
-        console.log("value of i outside is " + i);
         $(".currentPlayer").text("Player " + currentPlayer)
-        //console.log("Current player: " + currentPlayer);
         $("#switchContainer").css("display", "none"); 
         $("#gameContainer").css("display", "flex");
         timerID = window.setInterval(updateTime, 1000);
-        //console.log("Timer" + timerID + "Started");
+        console.log("Timer" + timerID + "Started");
         $("input").val('');
         showQuestion();
+        $("#timer").text("30");
     });     
     
 //gameContainer:
@@ -255,13 +252,14 @@ $("#next").click(function(){
         console.log(madGab.length);
     }
     
-//submit check question
+//submit - enter button
     $("input").keypress(function (e) {
         if (e.which ==13) {
             //this refers to $("input")
             jQuery('#submit').click();
         }
-    });        
+    }); 
+//submit- check question    
     $("#submit").on("click", checkQuestion)	
     function checkQuestion() {
         $("#submit").css("background-color", "#FFB6C1");     setTimeout(function () {
@@ -297,14 +295,14 @@ $("#next").click(function(){
         i+=1;
         showQuestion();
     })	    
-//when timer reaches 0    
+//timer countdown, reach 0    
     function updateTime() {    
         seconds--;
         $("#timer").text(seconds);
         if (seconds === 0) {
            $("#gameContainer").css("display", "none"); 
             window.clearInterval(timerID);
-            //console.log("round over timer" + timerID + "stopped ")
+            console.log("round over timer" + timerID + "stopped ")
             seconds = 30;
             if (currentPlayer === 1) {      
                 $("#switchContainer").css("display", "flex");
@@ -319,14 +317,13 @@ $("#next").click(function(){
                 currentPlayer = 1;
             }
             $(".currentPlayer").text("Player " + currentPlayer)
-            //console.log("Current player: " + currentPlayer)
         }
     }  
 //pause game    
     $("#pause").on("click", pauseGame)	
     function pauseGame () {     
         window.clearInterval(timerID);
-        //console.log("timer" + timerID + "paused")
+        console.log("timer" + timerID + "paused")
         $("#gameContainer").css("display", "none"); 
         $("#pauseContainer").css("display", "flex");           
     }                                      
@@ -335,12 +332,12 @@ $("#next").click(function(){
     function resumeGame () {     
         $("#pauseContainer").css("display", "none"); 
         $("#gameContainer").css("display", "flex");
-        // creates new timers 
+        // creates a new timer 
         timerID = window.setInterval(updateTime, 1000);
-        //console.log("resume timer " + timerID)
+        console.log("resume timer " + timerID)
     }
     
-//Reset button in Pause & End & noMoreQuestions Container
+//Reset button in Pause, End noMoreQuestions Container
     $(".reset").on("click", resetGame)	
     function resetGame() {
         $("#pauseContainer").css("display", "none"); 
@@ -348,6 +345,7 @@ $("#next").click(function(){
         $("#noMoreQuestions").css("display", "none");
         $("#startContainer").css("display", "flex");
         seconds = 30;
+        $("#timer").text("30");
         score1 = 0;
         score2 = 0;
         $("score1").text(score1);
@@ -375,7 +373,7 @@ $("#next").click(function(){
 //nextround     
     $('#nextRound').click(function (){              
         $("#switchContainer").css("display", "flex"); 
-        $("#endContainer").css("display", "none");
+        $("#timer").text("30"); $("#endContainer").css("display", "none");
     });
     
 });
