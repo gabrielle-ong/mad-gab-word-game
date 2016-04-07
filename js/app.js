@@ -11,27 +11,6 @@ $( function pageLoaded () {
 //Questions and Answers
 var madGab = [               
         {
-        question: "Dew A Goo Gulls Urge",
-        answer: "do a google search",
-        hint: "Do a.... (Uniquely WDI)"
-        },
-        {
-        question: "Highs Peed Con Hex Shun",
-        answer: "high speed connection",
-        hint: "Uniquely WDI"
-        },
-        {
-        question: "Pretty Shack Scent",
-        answer: "british accent",
-        hint: "Uniquely WDI"
-        },
-        {
-        question: "Just For Kid",
-        answer: "just fork it",
-        hint: "Uniquely WDI"
-        },  
-        //No 4 onwards:
-        {
         question: "Choke late Die Scream", 
         answer: "chocolate ice cream",
         hint: "Dessert"
@@ -41,11 +20,6 @@ var madGab = [
         answer: "virgin olive oil",
         hint: "Food"
         },        
-        {
-        question: "Abb Odd Hull Love oak", 
-        answer: "a bottle of coke",
-        hint: "A bottle of..."
-        },
         {
         question: "Assess Seam Ease Heed", 
         answer: "a sesame seed",
@@ -147,39 +121,9 @@ var madGab = [
         hint: "conversational phrase"
         },
         {
-        question: "We Shy Worth Hare", 
-        answer: "wish i was there",
-        hint: "conversational phrase"
-        },
-        {
         question: "Hype Peeb Earth Hey", 
         answer: "happy birthday",
         hint: "conversational phrase"
-        },
-        {
-        question: "Europe Lay Sore Mine?", 
-        answer: "your place or mine?",
-        hint: "conversational phrase + ?"
-        },
-        {
-        question: "Mow Thin Nuke Inch Who", 
-        answer: "more than you can chew",
-        hint: "Idiom"
-        },
-        {
-        question: "Ape Any Safe Diss Ape Any earned", 
-        answer: "a penny saved is a penny earned",
-        hint: "Idiom"
-        },
-        {
-        question: "too wrongs Taunt Make Alright", 
-        answer: "two wrongs dont make a right",
-        hint: "Idiom"
-        },
-        {
-        question: "Good Yings Commense Maul Pack Ages", 
-        answer: "good things come in small packages",
-        hint: "Idiom"
         },
         {
         question: "Doe Judge A Boo K Bye Discover", 
@@ -194,7 +138,7 @@ var madGab = [
    ]  
     
 //General - turns and rounds
-    var seconds = 30;
+    var seconds = 60;
     var timerID;
     var currentPlayer = 1;
     var round = 1; 
@@ -214,29 +158,16 @@ $("#next").click(function(){
         $("#switchContainerRound").text("Round " + round);
         $(".currentPlayer").text("Player " + currentPlayer)
         
-//WDI edution
-        wdiStatus = confirm("Uniquely WDI edition available. Would you like to try it?"); 
-        if (wdiStatus === true) {
-            i = 0; 
-        } 
-        else {
-            i = 4;
-        } 
-        console.log(wdiStatus.toLowerCase());
-        console.log("value of i is " + i);                            
-    });
-    
 //switchContainer
     $('#begin').click(function (){
-        console.log("value of i outside is " + i);
         $(".currentPlayer").text("Player " + currentPlayer)
-        //console.log("Current player: " + currentPlayer);
         $("#switchContainer").css("display", "none"); 
         $("#gameContainer").css("display", "flex");
         timerID = window.setInterval(updateTime, 1000);
-        //console.log("Timer" + timerID + "Started");
+        console.log("Timer" + timerID + "Started");
         $("input").val('');
         showQuestion();
+        $("#timer").text("60");
     });     
     
 //gameContainer:
@@ -255,13 +186,14 @@ $("#next").click(function(){
         console.log(madGab.length);
     }
     
-//submit check question
+//submit - enter button
     $("input").keypress(function (e) {
         if (e.which ==13) {
             //this refers to $("input")
             jQuery('#submit').click();
         }
-    });        
+    }); 
+//submit- check question    
     $("#submit").on("click", checkQuestion)	
     function checkQuestion() {
         $("#submit").css("background-color", "#FFB6C1");     setTimeout(function () {
@@ -297,15 +229,15 @@ $("#next").click(function(){
         i+=1;
         showQuestion();
     })	    
-//when timer reaches 0    
+//timer countdown, reach 0    
     function updateTime() {    
         seconds--;
         $("#timer").text(seconds);
         if (seconds === 0) {
            $("#gameContainer").css("display", "none"); 
             window.clearInterval(timerID);
-            //console.log("round over timer" + timerID + "stopped ")
-            seconds = 30;
+            console.log("round over timer" + timerID + "stopped ")
+            seconds = 60;
             if (currentPlayer === 1) {      
                 $("#switchContainer").css("display", "flex");
                 currentPlayer = 2;
@@ -319,14 +251,13 @@ $("#next").click(function(){
                 currentPlayer = 1;
             }
             $(".currentPlayer").text("Player " + currentPlayer)
-            //console.log("Current player: " + currentPlayer)
         }
     }  
 //pause game    
     $("#pause").on("click", pauseGame)	
     function pauseGame () {     
         window.clearInterval(timerID);
-        //console.log("timer" + timerID + "paused")
+        console.log("timer" + timerID + "paused")
         $("#gameContainer").css("display", "none"); 
         $("#pauseContainer").css("display", "flex");           
     }                                      
@@ -335,19 +266,20 @@ $("#next").click(function(){
     function resumeGame () {     
         $("#pauseContainer").css("display", "none"); 
         $("#gameContainer").css("display", "flex");
-        // creates new timers 
+        // creates a new timer 
         timerID = window.setInterval(updateTime, 1000);
-        //console.log("resume timer " + timerID)
+        console.log("resume timer " + timerID)
     }
     
-//Reset button in Pause & End & noMoreQuestions Container
+//Reset button in Pause, End noMoreQuestions Container
     $(".reset").on("click", resetGame)	
     function resetGame() {
         $("#pauseContainer").css("display", "none"); 
         $("#endContainer").css("display", "none"); 
         $("#noMoreQuestions").css("display", "none");
         $("#startContainer").css("display", "flex");
-        seconds = 30;
+        seconds = 60;
+        $("#timer").text("60");
         score1 = 0;
         score2 = 0;
         $("score1").text(score1);
@@ -375,7 +307,7 @@ $("#next").click(function(){
 //nextround     
     $('#nextRound').click(function (){              
         $("#switchContainer").css("display", "flex"); 
-        $("#endContainer").css("display", "none");
+        $("#timer").text("60"); $("#endContainer").css("display", "none");
     });
     
 });

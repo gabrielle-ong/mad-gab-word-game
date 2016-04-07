@@ -64,7 +64,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    display: none;
+    //display: none;
     max-width: 650px;
 }
 #about {
@@ -84,13 +84,13 @@ color: #FF504F;
 
 //gameContainer
 #gameContainer {
-    //display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px;
     max-width: 900px;
-    display: none;
+    //display: none;
     margin: 0px;
 }
 input {
@@ -146,13 +146,13 @@ container {
 
 //endContainer
 #endContainer {
-    //display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px;
     max-width: 850px;
-    display: none;
+    //display: none;
     margin: 0px;
     h5 {
         text-align: center;
@@ -203,13 +203,13 @@ score2{
 
 //pauseContainer
 #pauseContainer {
-    //display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
     margin-top: 100px;
-    display: none;
+    //display: none;
 }
 #reset-resume {
     display: flex;
@@ -221,10 +221,10 @@ score2{
 
 //switchContainer
 #switchContainer {
-    //display: flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
-    display: none;
+    //display: none;
     padding: 30px;
     h5 h1{
         text-align: center;
