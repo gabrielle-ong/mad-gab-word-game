@@ -143,7 +143,7 @@ var madGab = [
     var currentPlayer = 1;
     var round = 1; 
     var wdiStatus;
-    var i;
+    var i = 0;
 
 //aboutContainer
 $("#next").click(function(){             
@@ -156,8 +156,8 @@ $("#next").click(function(){
         $("#aboutContainer").css("display", "none"); 
         $("#switchContainer").css("display", "flex");
         $("#switchContainerRound").text("Round " + round);
-        $(".currentPlayer").text("Player " + currentPlayer)
-        
+        $(".currentPlayer").text("Player " + currentPlayer);
+    });
 //switchContainer
     $('#begin').click(function (){
         $(".currentPlayer").text("Player " + currentPlayer)
@@ -284,6 +284,7 @@ $("#next").click(function(){
         score2 = 0;
         $("score1").text(score1);
         $("score2").text(score2);
+        i = 0;
     }
     
 //endContainer - check winner
