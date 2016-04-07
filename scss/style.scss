@@ -60,6 +60,7 @@ body {
 }
 //aboutContainer
 #aboutContainer {
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -84,7 +85,7 @@ color: #FF504F;
 
 //gameContainer
 #gameContainer {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -146,7 +147,7 @@ container {
 
 //endContainer
 #endContainer {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -166,6 +167,8 @@ container {
     //border: 1px solid black;
 }
 .scoreBox {
+    display: flex;
+    flex-direction: column;
     width: 200px;
     text-align: center;
     border-radius: 30px;
@@ -203,7 +206,7 @@ score2{
 
 //pauseContainer
 #pauseContainer {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -221,7 +224,7 @@ score2{
 
 //switchContainer
 #switchContainer {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     //display: none;
@@ -242,3 +245,9 @@ score2{
     padding: 30px;
     text-align: center;
 }
+#finalScoreBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+    }

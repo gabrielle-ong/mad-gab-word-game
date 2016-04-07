@@ -57,11 +57,11 @@ body {
   border-radius: 30px; }
 
 #aboutContainer {
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  display: none;
   max-width: 650px; }
 
 #about {
@@ -78,12 +78,12 @@ li {
   list-style-position: inside; }
 
 #gameContainer {
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30px;
   max-width: 900px;
-  display: none;
   margin: 0px; }
 
 input {
@@ -134,12 +134,12 @@ container {
   text-align: center; }
 
 #endContainer {
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30px;
   max-width: 850px;
-  display: none;
   margin: 0px; }
   #endContainer h5 {
     text-align: center; }
@@ -151,6 +151,8 @@ container {
   justify-content: space-around; }
 
 .scoreBox {
+  display: flex;
+  flex-direction: column;
   width: 200px;
   text-align: center;
   border-radius: 30px;
@@ -180,12 +182,12 @@ score1, score2 {
   justify-content: center; }
 
 #pauseContainer {
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-top: 100px;
-  display: none; }
+  margin-top: 100px; }
 
 #reset-resume {
   display: flex;
@@ -195,9 +197,9 @@ score1, score2 {
   width: 600px; }
 
 #switchContainer {
+  display: none;
   align-items: center;
   flex-direction: column;
-  display: none;
   padding: 30px; }
   #switchContainer h5 h1 {
     text-align: center; }
@@ -211,5 +213,11 @@ score1, score2 {
   justify-content: center;
   padding: 30px;
   text-align: center; }
+
+#finalScoreBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,9 @@ var score1 = 0;
 var score2 = 0;
 $("score1").text(score1);
 $("score2").text(score2);
+//noMoreQuestions
+$('#finalScore1').text(score1 + "/25");
+$('#finalScore2').text(score2 + "/25");   
 
 
 
@@ -10,27 +13,6 @@ $( function pageLoaded () {
     
 //Questions and Answers
 var madGab = [               
-        {
-        question: "Dew A Goo Gulls Urge",
-        answer: "do a google search",
-        hint: "Do a.... (Uniquely WDI)"
-        },
-        {
-        question: "Highs Peed Con Hex Shun",
-        answer: "high speed connection",
-        hint: "Uniquely WDI"
-        },
-        {
-        question: "Pretty Shack Scent",
-        answer: "british accent",
-        hint: "Uniquely WDI"
-        },
-        {
-        question: "Just For Kid",
-        answer: "just fork it",
-        hint: "Uniquely WDI"
-        },  
-        //No 4 onwards:
         {
         question: "Choke late Die Scream", 
         answer: "chocolate ice cream",
@@ -41,11 +23,6 @@ var madGab = [
         answer: "virgin olive oil",
         hint: "Food"
         },        
-        {
-        question: "Abb Odd Hull Love oak", 
-        answer: "a bottle of coke",
-        hint: "A bottle of..."
-        },
         {
         question: "Assess Seam Ease Heed", 
         answer: "a sesame seed",
@@ -147,39 +124,9 @@ var madGab = [
         hint: "conversational phrase"
         },
         {
-        question: "We Shy Worth Hare", 
-        answer: "wish i was there",
-        hint: "conversational phrase"
-        },
-        {
         question: "Hype Peeb Earth Hey", 
         answer: "happy birthday",
         hint: "conversational phrase"
-        },
-        {
-        question: "Europe Lay Sore Mine?", 
-        answer: "your place or mine?",
-        hint: "conversational phrase + ?"
-        },
-        {
-        question: "Mow Thin Nuke Inch Who", 
-        answer: "more than you can chew",
-        hint: "Idiom"
-        },
-        {
-        question: "Ape Any Safe Diss Ape Any earned", 
-        answer: "a penny saved is a penny earned",
-        hint: "Idiom"
-        },
-        {
-        question: "too wrongs Taunt Make Alright", 
-        answer: "two wrongs dont make a right",
-        hint: "Idiom"
-        },
-        {
-        question: "Good Yings Commense Maul Pack Ages", 
-        answer: "good things come in small packages",
-        hint: "Idiom"
         },
         {
         question: "Doe Judge A Boo K Bye Discover", 
@@ -194,36 +141,27 @@ var madGab = [
    ]  
     
 //General - turns and rounds
-    var seconds = 30;
+    var seconds = 60;
     var timerID;
     var currentPlayer = 1;
     var round = 1; 
     var wdiStatus;
-    var i;
+    var i = 0;
 
 //aboutContainer
-$("#next").click(function(){             
-    $("#startContainer").css("display", "none"); 
-    $("#aboutContainer").css("display", "flex");
-})
-
+    $("#next").click(function(){             
+        $("#startContainer").css("display", "none"); 
+        $("#aboutContainer").css("display", "flex");
+    });
+    
 //startContainer       
     $('#letsPlay').click(function (){                   
         $("#aboutContainer").css("display", "none"); 
         $("#switchContainer").css("display", "flex");
         $("#switchContainerRound").text("Round " + round);
-        $(".currentPlayer").text("Player " + currentPlayer)
-        
-//WDI edution
-        wdiStatus = confirm("Uniquely WDI edition available. Would you like to try it?"); 
-        if (wdiStatus === true) {
-            i = 0; 
-        } 
-        else {
-            i = 4;
-        }                         
+        $(".currentPlayer").text("Player " + currentPlayer);
     });
-    
+        
 //switchContainer
     $('#begin').click(function (){
         $(".currentPlayer").text("Player " + currentPlayer)
@@ -233,7 +171,7 @@ $("#next").click(function(){
         console.log("Timer" + timerID + "Started");
         $("input").val('');
         showQuestion();
-        $("#timer").text("30");
+        $("#timer").text("60");
     });     
     
 //gameContainer:
@@ -303,7 +241,7 @@ $("#next").click(function(){
            $("#gameContainer").css("display", "none"); 
             window.clearInterval(timerID);
             console.log("round over timer" + timerID + "stopped ")
-            seconds = 30;
+            seconds = 60;
             if (currentPlayer === 1) {      
                 $("#switchContainer").css("display", "flex");
                 currentPlayer = 2;
@@ -344,12 +282,13 @@ $("#next").click(function(){
         $("#endContainer").css("display", "none"); 
         $("#noMoreQuestions").css("display", "none");
         $("#startContainer").css("display", "flex");
-        seconds = 30;
-        $("#timer").text("30");
+        seconds = 60;
+        $("#timer").text("60");
         score1 = 0;
         score2 = 0;
         $("score1").text(score1);
         $("score2").text(score2);
+        i = 0;
     }
     
 //endContainer - check winner
@@ -373,7 +312,7 @@ $("#next").click(function(){
 //nextround     
     $('#nextRound').click(function (){              
         $("#switchContainer").css("display", "flex"); 
-        $("#timer").text("30"); $("#endContainer").css("display", "none");
+        $("#timer").text("60"); $("#endContainer").css("display", "none");
     });
-    
-});
+        
+})
