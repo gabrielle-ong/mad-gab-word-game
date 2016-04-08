@@ -214,9 +214,10 @@ score1, score2 {
   padding: 30px;
   text-align: center; }
 
-.finalScoreBox {
+#finalScoreBox {
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+  min-width: 600px; }
 
 /*# sourceMappingURL=style.css.map */
