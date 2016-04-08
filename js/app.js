@@ -3,6 +3,8 @@ var score1 = 0;
 var score2 = 0;
 $("score1").text(score1);
 $("score2").text(score2);
+$("finalScore1").text(score1 + '/25');
+$("finalScore2").text(score2 + '/25');
 
 
 
