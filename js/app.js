@@ -193,6 +193,7 @@ $("#next").click(function(){
         if (e.which ==13) {
             //this refers to $("input")
             jQuery('#submit').click();
+            jQuery('#letsPlayw').click();
         }
     }); 
 //submit- check question    
