@@ -3,17 +3,18 @@ var score1 = 0;
 var score2 = 0;
 $("score1").text(score1);
 $("score2").text(score2);
-$("finalScore1").text(score1 + '/25');
-$("finalScore2").text(score2 + '/25');
+//noMoreQuestions
+$('#finalScore1').text(score1 + "/25");
+$('#finalScore2').text(score2 + "/25");   
 
 
 
 $( function pageLoaded () {
 
 //Questions and Answers
-var madGab = [
+var madGab = [               
         {
-        question: "Choke late Die Scream",
+        question: "Choke late Die Scream", 
         answer: "chocolate ice cream",
         hint: "Dessert"
         },
@@ -21,9 +22,9 @@ var madGab = [
         question: "Verge in Ollie Foil",
         answer: "virgin olive oil",
         hint: "Food"
-        },
+        },        
         {
-        question: "Assess Seam Ease Heed",
+        question: "Assess Seam Ease Heed", 
         answer: "a sesame seed",
         hint: "A ...(food)"
         },
@@ -123,7 +124,7 @@ var madGab = [
         hint: "conversational phrase"
         },
         {
-        question: "Hype Peeb Earth Hey",
+        question: "Hype Peeb Earth Hey", 
         answer: "happy birthday",
         hint: "conversational phrase"
         },
@@ -160,6 +161,7 @@ $("#next").click(function(){
         $("#switchContainerRound").text("Round " + round);
         $(".currentPlayer").text("Player " + currentPlayer);
     });
+
 //switchContainer
     $('#begin').click(function (){
         $(".currentPlayer").text("Player " + currentPlayer)
@@ -241,6 +243,7 @@ $("#next").click(function(){
             window.clearInterval(timerID);
             console.log("round over timer" + timerID + "stopped ")
             seconds = 60;
+
             if (currentPlayer === 1) {
                 $("#switchContainer").css("display", "flex");
                 currentPlayer = 2;
