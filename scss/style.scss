@@ -24,7 +24,7 @@ body {
     justify-content: center;
     min-width: 300px;
     margin: auto;
-    
+
     height: 100%;
     display: -ms-flexbox;
 	display: -webkit-flex;
@@ -89,8 +89,8 @@ article {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    
+
+
 }
 #about {
 color: #FF504F;
@@ -133,10 +133,10 @@ input {
 #answer {
     display: flex;
     flex-direction: row;
-    width: 90%
+    justify-content: center;
     span{
-        font-size: 4em;
-        margin-left: 20px;
+        font-size: 2em;
+        margin-left: 10px;
     }
 }
 #skip-submit {
