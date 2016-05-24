@@ -12,31 +12,30 @@
 <body>
     <div id="startContainer">
         <h1 id="title" class="center">Mad Gab</h1>
-        <h4 id="credit">By Sane Gab</h4>
-        <div id="instructions" class="center">
-            <h2 class="example">“Itsy Citing Foe Wall.”</h2>
-            <h3>The translation:</h3>
-            <h2 class="example">It’s Exciting For All.</h2>
-            <h3>The game where even winners sound like losers. <br> Take turns to translate as many Mad Gabs as you can in 1 minute.
+        <div id="credit">
+            <h4>By Sane Gab</h4>
+        </div>
+        <div id="instructions" class="center vertical-align">
+            <h3>Say this out loud:</h3>
+            <h3 class="example">“Itsy Citing Foe Wall.”</h3>
             <br>
-            <br>
+            <h3>What did you say?</h3>
+            <h3 class="example">It’s Exciting For All.</h3>
+            <article>
+                <h4>The game where even winners sound like losers.
+                <br> Take turns to translate as many Mad Gabs you can in 1 minute.</h4>
+            </article>
             <button id="next" class="button">Next</button>   
-            </h3>
         </div>
     </div>
         
-    <div id="aboutContainer" class="center">
-        <h5 id="about">About the Game</h5>
-        <h3>
-            This game is a test for the human brain to process sounds.
-            <br>
-            The phrases have to be spoken out loud and listened to.
-        </h3>  
-        <ul><h5>Game features:</h5>
+    <div id="aboutContainer" class="center vertical-align">
+        <ul><h5>Pro Tips:</h5>
             <h3>
+               <li> The phrases have to be spoken out loud and listened to.</li>
                 <li>Answers are case insensitive</li>
                 <li>Unanswered questions go to the next player</li>
-                <li>Press enter or click submit</li>
+                <li>Press enter or click submit to check answer</li>
             </h3>
         </ul>
         <button id="letsPlay" class="button center">Let's Play!</button>
@@ -44,11 +43,11 @@
     
     
     <div id="gameContainer">
-        <h2 id="question" class="example">Question Here</h2>
+        <h3 id="question" class="example">Question Here</h3>
         <h3>Answer:</h3>
         <div id="answer">
-            <input  type="text" placeholder="Hint:">
-            <span></span>
+                <input  type="text" placeholder="Hint:">
+                <span></span>
         </div>
         <div id="skip-submit">
             <button id="skip" class="button">Skip</button>
@@ -62,7 +61,7 @@
             </left>
             
             <div id="timerDiv">
-                <h2 class="currentPlayer redText"  id="player">Player no</h2>
+                <h3 class="currentPlayer redText"  id="player">Player no</h3>
                 <h2>Time Left: </h2>
                 <h2 class="redText" id="timer">60</h2>
                 <button id="pause" class="button">Pause Game</button>
@@ -81,14 +80,14 @@
                 <h2 class="underlined">Player 1:</h2>
                 <score1>0</score1>
                 <hr>
-                <h2 id="remarks1"></h2>
+                <h3 id="remarks1"></h3>
             </div>
 
             <div class="scoreBox">
                 <h2 class="underlined">Player 2:</h2>
                 <score2>0</score2>
                 <hr>
-                <h2 id="remarks2"></h2>
+                <h3 id="remarks2"></h3>
                 </div>
             </div>
         <div id="reset-next">
@@ -98,7 +97,7 @@
     </div>
         
     <div id="pauseContainer">
-        <h1 id="title" class="center">Game Paused</h1>
+        <h5 id="title" class="center">Game Paused</h5>
         <div id="reset-resume">
             <button class="reset button">Reset Game</button>
             <button id="resume" class="button">Resume Game</button>
@@ -125,14 +124,10 @@
             <div class="scoreBox">
                 <h2 class="underlined">Player 2:</h2>
                 <score2 id="finalScore2">0/25</score2>
+                </div>
             </div>
-        </div>
-        <br>
-        <div>
-            <h2>Play Again?</h2>
-            <button class="reset button">Reset Game</button>
-        </div>
+        <h2>Play Again?</h2>
+        <button class="reset button">Reset Game</button>
     </div>
 <body>
 <html>
-

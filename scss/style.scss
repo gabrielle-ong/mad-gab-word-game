@@ -1,6 +1,6 @@
 h1 {
     font-size: 8em;
-    margin: 20px;
+    margin: 5px;
 }
 h2 {
     font-size: 2em;
@@ -8,65 +8,89 @@ h2 {
 }
 h3 {
     font-size: 1.5em;
+    margin: 5px;
 }
 h4 {
-    font-size: 1em;
+    font-size: 1.25em;
+    margin: 5px;
 }
 h5 {
-    font-size: 5em;
+    font-size: 4em;
     margin: 5px;
 }
 body {
     background-color: #72E8E2;
     font-family: 'Purple Purse', cursive;
-    align-items: center;
     justify-content: center;
-    min-width: 700px;
-    display: flex;
-}
+    min-width: 300px;
+    margin: auto;
 
-#startContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
+    height: 100%;
+    display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
 }
 .center {
-    text-align: center
+    text-align: center;
+}
+#startContainer {
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
 }
 #title {
     width: 100%;
-    margin: -20px; 
+    line-height: 70%;
+    text-align: center;
+    margin-top: 20px;
 }
 #credit {
     font-family: 'Satisfy', cursive;
-    margin-top: -6px;
-    margin-left: 350px;
-    //border: 1px solid black;
+    max-width: 700px;
+    padding-right: 30px;
+    margin-top: -10px;
+}
+#credit h4 {
+    text-align: right;
 }
 .example {
     background-color: white;
     border: 2px solid black;
-    padding: 7px;
+    padding: 3px;
     text-align: center;
 }
-.button {
-    font-size: 2em;
-    background-color: white;
-    border: 3px solid black;
-    padding: 5px 20px;
-    border-radius: 30px;
+article {
+    margin: 0px auto;
 }
-//aboutContainer
+.button {
+    font-size: 1.5em;
+    background-color: white;
+    padding: 3px 20px;
+    border-radius: 30px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+//ProTip Container
 #aboutContainer {
-    display: none;
+    //
+        display: none;
+    //
+    margin: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    //display: none;
-    max-width: 650px;
+
+
 }
 #about {
 color: #FF504F;
@@ -81,32 +105,37 @@ color: #FF504F;
         color: black;
         font-size: 1em;
         list-style-position: inside;
+        padding-left: -10px;
     }
 
 //gameContainer
 #gameContainer {
+    //
     display: none;
+    //
+    padding-top:30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
-    max-width: 900px;
-    //display: none;
+    padding: 20px auto;
     margin: 0px;
 }
 input {
     font-family: 'Purple Purse', cursive;
-    font-size: 2em;
+    font-size: 1.25em;
     background-color: white;
     border: 2px solid black;
-    width: 500px;
+    width: 280px;
+    padding: 2px 5px;
+    height: 30px;
 }
 
 #answer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     span{
-        font-size: 3em;
+        font-size: 2em;
         margin-left: 10px;
     }
 }
@@ -119,7 +148,7 @@ input {
 }
 container {
     margin-top: 40px;
-    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -132,11 +161,10 @@ container {
     align-content: center;
     border: 5px dashed white;
     border-radius: 30px;
-    margin: 5px 20px;
-    min-width: 200px;
+    min-width: 150px;
 }
 .redText {
-    font-size: 3em;
+    font-size: 2em;
     color: #F6504F;
     -webkit-text-stroke: 0.5px black;
 }
@@ -147,13 +175,14 @@ container {
 
 //endContainer
 #endContainer {
+    //
     display: none;
+    //
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px;
     max-width: 850px;
-    //display: none;
     margin: 0px;
     h5 {
         text-align: center;
@@ -187,7 +216,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 //Game and End Container Scores
@@ -212,14 +241,12 @@ score2{
     align-content: center;
     align-items: center;
     margin-top: 100px;
-    //display: none;
 }
 #reset-resume {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 100px;
-    width: 600px;
 }
 
 //switchContainer
@@ -227,9 +254,8 @@ score2{
     display: none;
     align-items: center;
     flex-direction: column;
-    //display: none;
-    padding: 30px;
-    h5 h1{
+    padding: 30px 0;
+    h5 h3{
         text-align: center;
     }
     button {
@@ -238,7 +264,10 @@ score2{
 }
 //noMore Questions Container
 #noMoreQuestions {
+    //
+    //display: flex;
     display: none;
+    //
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -246,8 +275,10 @@ score2{
     text-align: center;
 }
 #finalScoreBox{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 500px;
-    }
+    display: none;
+    //
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    min-width: 600px;
+}
