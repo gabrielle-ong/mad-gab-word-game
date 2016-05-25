@@ -18,11 +18,15 @@ h5 {
   font-size: 4em;
   margin: 5px; }
 
+h6 {
+  font-size: 5em;
+  margin: 5px; }
+
 body {
   background-color: #72E8E2;
   font-family: 'Purple Purse', cursive;
   justify-content: center;
-  min-width: 300px;
+  min-width: 260px;
   margin: auto;
   height: 100%;
   display: -ms-flexbox;
